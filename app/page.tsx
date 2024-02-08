@@ -18,7 +18,7 @@ export default function Home() {
   const days = ['Søndag', 'Mandag', 'Tirsdag', 'Onsdag', 'Torsdag', 'Fredag', 'Lørdag'];
   const dayName = days[time.getDay()];
 
-  const dateOptions = { day: '2-digit', month: '2-digit', year: '2-digit', hour: '2-digit', minute: '2-digit' };
+  const dateOptions = { day: '2-digit', month: '2-digit', year: '2-digit' as const, hour: '2-digit', minute: '2-digit' };
   const dateString = time.toLocaleDateString('no-NO', dateOptions);
 
   return (
