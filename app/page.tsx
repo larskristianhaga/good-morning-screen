@@ -28,7 +28,7 @@ export default function Home() {
         </div>
         <div className="text-4xl h-3/6">
           <p>{dayName}</p>
-          <p>{}{time.getDate()}.{time.getMonth() + 1}.{time.getFullYear()}</p>
+          <p>{time.getDate()}.{time.getMonth() + 1}.{time.getFullYear()}</p>
         </div>
       </div>
     </main>
