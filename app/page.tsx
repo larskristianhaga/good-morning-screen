@@ -24,10 +24,11 @@ export default function Home() {
       <iframe className="m-5 w-2/5 h-screen rounded-lg" src="https://www.yr.no/nb/innhold/1-72837/card.html?mode=dark"/>
       <div className="m-5 w-1/5 h-screen rounded-lg flex flex-col justify-around">
         <div className="text-4xl h-3/6">
-          <p>{dayName}</p>
+            <p>{time.getHours()}:{time.getMinutes()}:{time.getSeconds()}</p>
         </div>
         <div className="text-4xl h-3/6">
           <p>{dayName}</p>
+          <p>{}{time.getDate()}.{time.getMonth() + 1}.{time.getFullYear()}</p>
         </div>
       </div>
     </main>
