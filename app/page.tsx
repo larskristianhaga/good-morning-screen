@@ -30,10 +30,10 @@ export default function Home() {
                     title="Yr værvarsel for Oslo"
                     src="https://www.yr.no/nb/innhold/1-72837/card.html?mode=dark"/>
             <div className="m-5 w-1/5 h-screen rounded-lg flex flex-col justify-around">
-                <div className="flex justify-center items-center text-8xl h-3/6">
+                <div className="flex justify-center items-center text-6xl h-3/6">
                     <p>{timeString}</p>
                 </div>
-                <div className="flex-col justify-center items-center fle text-8xl h-3/6">
+                <div className="flex-col justify-center items-center fle text-6xl h-3/6">
                     <p>{dayName}</p>
                     <p>{todayFullDateString}</p>
                 </div>
