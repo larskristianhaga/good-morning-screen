@@ -33,7 +33,7 @@ export default function Home() {
                 <div className="flex justify-center items-center text-6xl h-3/6">
                     <p>{timeString}</p>
                 </div>
-                <div className="flex-col justify-center items-center fle text-6xl h-3/6">
+                <div className="flex-col justify-center items-center fle text-5xl h-3/6">
                     <p>{dayName}</p>
                     <p>{todayFullDateString}</p>
                 </div>
