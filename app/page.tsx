@@ -6,11 +6,11 @@ export default function Home() {
     const [time, setTime] = useState(new Date());
 
     useEffect(() => {
-        const timer = setInterval(() => {
+        const timer = setInterval((): void => {
             setTime(new Date());
         }, 1000);
 
-        return () => {
+        return (): void => {
             clearInterval(timer);
         };
     }, []);
