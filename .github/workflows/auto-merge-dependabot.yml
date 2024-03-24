@@ -1,4 +1,4 @@
-name: Auto Merge Dependabot PRs
+name: "Auto Merge Dependabot PR's"
 
 on:
   pull_request:
@@ -7,22 +7,23 @@ on:
     types: [ opened, synchronize ]
 
 jobs:
-  auto-merge-dependabot:
+  merge-dependabot-pr:
+    name: "Approve and merge Dependabot PR"
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    if: ${{ github.actor == 'dependabot[bot]' }}
 
-      - name: Auto Merge if Dependabot PR meets criteria
+    steps:
+      - name: log PR title
+        run: echo "PR title is ${{ github.event.pull_request.title }}"
+
+      - name: "Approve the PR"
+        run: gh pr review --approve "$PR_NUMBER"
         env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          PR_NUMBER=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
-          VERSION_LABEL=$(gh pr view $PR_NUMBER --json labels --jq '.labels[].name' | grep -E 'dependencies|version:patch|version:minor')
-          if [[ "$VERSION_LABEL" != "" && "$(gh pr checks $PR_NUMBER --json conclusion --jq '.checkRuns[].conclusion')" == "success" ]]; then
-            gh pr merge $PR_NUMBER --merge
-            echo "Merged PR #$PR_NUMBER"
-          else
-            echo "PR #$PR_NUMBER did not meet criteria for merging."
-          fi
+
+      - name: "Merge the PR"
+        run: gh pr merge --squash "$PR_NUMBER"
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
