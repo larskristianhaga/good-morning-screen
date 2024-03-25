@@ -1,20 +1,23 @@
 name: "Auto Merge Dependabot PR's"
 
-on:
-  pull_request:
-    branches:
-      - main
-    types: [ opened, synchronize ]
+on: pull_request
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
-  merge-dependabot-pr:
-    name: "Approve and merge Dependabot PR"
+  approve-and-merge-pr:
+    name: "Approve and merge Depentabot PR"
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
 
     steps:
-      - name: Checkout the repo
-        uses: actions/checkout@v4
+      - name: Get dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@v1
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: "Log PR title"
         run: echo "PR title is ${{ github.event.pull_request.title }}"
