@@ -8,7 +8,7 @@ permissions:
 
 jobs:
   approve-and-merge-pr:
-    name: "Approve and merge Depentabot PR"
+    name: "Approve and merge Dependabot PR"
     runs-on: ubuntu-latest
     if: ${{ github.actor == 'dependabot[bot]' }}
 
@@ -23,7 +23,7 @@ jobs:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
       - name: "Log changes to version"
-        run: echo "Version going from ${{ jobs.metadata.outputs.previous-version }}, to ${{ jobs.metadata.outputs.new-version }}"
+        run: echo "Version going from ${{ steps.metadata.outputs.previous-version }}, to ${{ steps.metadata.outputs.new-version }}"
 
       - name: "Approve the PR"
         run: gh pr review --approve "$PR_NUMBER"
