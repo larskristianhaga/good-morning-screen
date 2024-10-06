@@ -26,9 +26,11 @@ export default function Home() {
             <iframe className="m-5 w-2/5 rounded-lg"
                     title="Ruter sanntidsinformasjon"
                     src="https://mon.ruter.no/departures/59.9181008472934-10.742226849607649/N4Igrgzgpgwg9gGzAWwHYBkCGBPOYAuIAXAGaYLQA0IARnJgE4AmExA2qBPnAA4AKCTAGMoASRbsQAOQDKAJSIzu-QSKIBWABwAWAAwB2ENVkKlvAcKhEAbLoDMAJgcgAutSZRB2KEyWN8ACoAlshQxA7UABZBTB4YQahQrESgJorKFmq2js5EbNLyRACKYDhE+up6ALQAjJpVACJB0KhGBQolZRXVdVVmDHBVAOIMUCQtAARcAHRtaZ3Y5ZW6tfp9CS1zhQtLPWsyG1Cow6PjR1P4s8bbpYs1ug6advU1NVJVALKYAFZwDFxgI5bDq3Ij3R52ACctTeVQA0t9PBAAKesa4grrLWrQ9DfTA0BhgYHFUEVKHYz4-P4AoHokllcFPaE1SHvABSUAYqBomES3AYAHMoIQ6TtGeSWe8AKMQAnI-C09r0u4PJ4vVnwhgJAUQb7I4li1US9mc7m84V-IUipWGiEvd4AVQQCFNyh4ivmoPF0Ic7wAos7tRBCUxUR6bgyjfVfVUABtcTmoiYBVx0swqSw2CGST0Mmrqcl2NYACSRJGwDFTSvTmSsWj0hjyNq9uj06mZsK+v3++EBrVFLbbL1hCKRqINLchrzWNTsuneMl5TAAbkEANaYCeRqc1Gd6d4AISga7XSV7m4H2+ntXUKyGYGdkUwYAFW5VO5ntiqcmwJ4S-ebTF1GsVZv3XCBIjgCAeCCfByGFN8lnUGd9kOY4RjGSYZkQipgNqeo5HAyDoNg+DrVzRZcJnep+kGDCzlQC4rkAyj1DwllKW7GkAIopCZxxPECSJS8VTbZkNThLVUB1PVEPuIdsRNLkeT5S0EJEsFW10LRFKqGU5QVHiI1E7TmUdZ1XV4d0jIxEydNhDllPNfkrTkrT2yqGN4wVBgkxTDT5O06N-UDaTgzAUNNgC3RIQcbRtCqIsqlLChy0rFwAF9qFQFAaE5AB5EgGigHh-DAUZkhqCIQHwWCXWIEAYEwfBIimDcEAmHhkQmX4aBoNomGafEXSYAIGF5aC-nwD44A8ZI2DcEAjmGnxiHwQkoCiGIoDG4Q13gJA0GIMgKCgLLOAyVQxAkPJFo8LwfD8BhAhCMIiF0LbYiOdAEiSYhgCykAcuQPKGEK4rSue8q-qITRqFq-B6qIEAAmEkBBogFbRvG1BJuema5vYRblpoEbjvIKgQGiDxdqEfbEBQVpSAps7FuXTkICCOAmYcDKgA"/>
-            <iframe className="m-5 w-2/5 rounded-lg"
-                    title="Yr værvarsel for Oslo"
-                    src="https://www.yr.no/nb/innhold/1-72837/card.html?mode=dark"/>
+            <div className="m-5 w-2/5">
+                <iframe className="rounded-lg mb-5" style={{height: '48%'}}
+                        title="Yr værvarsel for Oslo"
+                        src="https://www.yr.no/nb/innhold/1-72837/card.html?mode=dark"/>
+            </div>
             <div className="m-5 w-1/5 rounded-lg flex flex-col justify-around">
                 <div className="flex justify-center items-center text-6xl h-3/6">
                     <p>{timeString}</p>
