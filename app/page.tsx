@@ -35,10 +35,10 @@ export default function Home() {
                         src="https://calendar.google.com/calendar/embed?wkst=2&ctz=Europe%2FBerlin&showPrint=0&showTitle=0&showDate=0&showNav=0&mode=AGENDA&showTabs=0&showTz=0&src=MWJhZTk1MTdiMDlhMTNlYWU1NzZmNzk4YzA4Y2QzZDZlNzViZDA2ODk3NGIzMWY2OWZhMGU5YTU4YjVmMGYyZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E" />
             </div>
             <div className="m-4 w-1/5 rounded-lg flex flex-col justify-around">
-                <div className="flex justify-center items-center text-6xl h-3/6">
+                <div className="flex justify-center items-center text-6xl h-3/6 w-full">
                     <p>{timeString}</p>
                 </div>
-                <div className="flex-col justify-center items-center fle text-5xl h-3/6">
+                <div className="flex gap-4 flex-col justify-center items-center fle text-5xl h-3/6">
                     <p>{dayName}</p>
                     <p>{todayFullDateString}</p>
                 </div>
