@@ -32,7 +32,7 @@ export default function Home() {
                         src="https://www.yr.no/nb/innhold/1-72837/card.html?mode=dark"/>
                 <iframe className="rounded-lg mb-4 h-3/6 w-full"
                         title="Google Calendar"
-                        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FBerlin&showPrint=0&showTitle=0&showDate=0&showNav=0&showTabs=0&showTz=0&mode=AGENDA&src=ZmFiMjk0MmM3MTRiYmQzOTUxNzM5MWNkY2JhZTg4ODFjYWZkYTcyMDZmNWZhZTY1MDgyZmJjYmI1ZTAyM2NhZUBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4tZ2Iubm9yd2VnaWFuI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23F4511E&color=%237CB342"
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&ctz=Europe%2FBerlin&showPrint=0&showTitle=0&mode=AGENDA&showTabs=0&showCalendars=0&showTz=0&showDate=0&showNav=0&src=Zjk1MDFhOTE2ZjYxNjA4ZWEzZTUxODAzM2I3MmU3N2QzODM1MGJhM2RiMmFlZTQwMzllNzc1NjU2OGRhNTY0MEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23E67C73"
                 />
             </div>
             <div className="m-4 w-1/5 rounded-lg flex flex-col justify-around">
