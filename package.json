@@ -22,6 +22,6 @@
     "postcss": "^8",
     "tailwindcss": "^4.0.0",
     "eslint": "^8",
-    "eslint-config-next": "15.1.5"
+    "eslint-config-next": "15.1.6"
   }
 }
